@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>Links</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        a{
+            color: rgb(255, 0, 0);
+            text-decoration: none;
+            font-weight: bold;
+        }  
+
+        a:visited{
+            color: darkred;
+        }
+
+        a:hover{
+            text-decoration: underline;
+            color: blueviolet;
+        }
+
+        a:active{
+            color: yellow;
+        }
+
+        .especial{
+            background-color: rgba(0, 0, 0, 0.459);
+        }
+
+        .especial::before{
+            content: '☛ ';
+        }
+        .especial::after{
+            content: ' [Link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://www.google.com.br/" rel="external" target="_blank">Google</a></li>
+        <li><a href="https://www.youtube.com/" rel="external" target="_blank" class="especial">YouTube</a></li>
+        <li><a href="https://www.instagram.com/" rel="external" target="_blank" class="especial">Instagram</a></li>
+    </ul>
+
+
+
+</body>
+</html>
