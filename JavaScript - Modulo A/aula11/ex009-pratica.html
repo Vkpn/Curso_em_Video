@@ -17,9 +17,9 @@
         function checar() {
             var nac = window.document.getElementById('txtnac')
             var res = window.document.querySelector('div#res')
-            
-            res.innerHTML = `Como você nasceu no ${nac.value}, então `
-            if (nac.value == 'Brasil') {
+            var nac = String(txtnac.value)
+            res.innerHTML = `Como você nasceu no ${nac}, então `
+            if (nac == 'Brasil','brasil','BR','br','Br') {
                 res.innerHTML += 'você é Brasileiro!'            
             } else {
                 res.innerHTML += 'você é estrangeiro.' 
