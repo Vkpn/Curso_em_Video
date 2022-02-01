@@ -18,7 +18,7 @@
             var nac = window.document.getElementById('txtnac')
             var res = window.document.querySelector('div#res')
             var nac = String(txtnac.value)
-            res.innerHTML = `Como você nasceu no ${nac}, então `
+            res.innerHTML = `Como você nasceu no ${nac.toUpperCase()}, então `
             if (nac == 'Brasil','brasil','BR','br','Br') {
                 res.innerHTML += 'você é Brasileiro!'            
             } else {
