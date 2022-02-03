@@ -18,18 +18,15 @@ function contar(){
             alert(`[ERRO] Valor inicial e final iguais.`)
             res.innerHTML = `Impossivel contar!`
         }
-
     } else {
         var i = Number(ini.value)
         var f = Number(fim.value)
         var s = Number(sal.value)
-
         if (s <= 0){
             alert(`[ERRO] Valor de salto não pode ser 0 ou negativo, considerando salto igual a 1.`)
             s = 1
             document.getElementById(`fsalto`).value = 1;
         }
-
         res.innerHTML=`Contando: <br>`
         if (i < f) {
             for(var c = i; c <= f; c += s){
