@@ -3,20 +3,25 @@ function contar(){
     var fim = document.getElementById(`ffim`)
     var sal = document.getElementById(`fsalto`)
     var res = document.getElementById(`fres`)
+    var imp = document.getElementById(`fimp`)
 
     if (ini.value.length == 0 || fim.value.length == 0 || sal.value.length == 0 || ini.value == fim.value){
         if (ini.value.length == 0) {
             alert(`[ERRO] Valor inicial em branco.`)
             res.innerHTML = `Impossivel contar!`
+            document.getElementById(`fimp`).disabled = true
         } else if (fim.value.length == 0) {
             alert(`[ERRO] Valor final em branco.`)
             res.innerHTML = `Impossivel contar!`
+            document.getElementById(`fimp`).disabled = true
         } else if (sal.value.length == 0) {
             alert(`[ERRO] Valor do salto em branco.`)
             res.innerHTML = `Impossivel contar!`
+            document.getElementById(`fimp`).disabled = true
         } else if (ini.value == fim.value) {
             alert(`[ERRO] Valor inicial e final iguais.`)
             res.innerHTML = `Impossivel contar!`
+            document.getElementById(`fimp`).disabled = true
         }
     } else {
         var i = Number(ini.value)
@@ -38,5 +43,39 @@ function contar(){
             }
         }
         res.innerHTML += `\u{2714}`
+        document.getElementById(`fimp`).disabled = false
+    }
+}
+
+function imp(){
+    var ini = document.getElementById(`finicio`)
+    var fim = document.getElementById(`ffim`)
+    var sal = document.getElementById(`fsalto`)
+    var res = document.getElementById(`fres`)
+    
+
+    if (ini.value.length == 0 || fim.value.length == 0 || sal.value.length == 0 || ini.value == fim.value){
+        if (ini.value.length == 0) {
+            alert(`[ERRO] Valor inicial em branco.`)
+            res.innerHTML = `Impossivel contar!`
+            document.getElementById(`fimp`).disabled = true
+        } else if (fim.value.length == 0) {
+            alert(`[ERRO] Valor final em branco.`)
+            res.innerHTML = `Impossivel contar!`
+            document.getElementById(`fimp`).disabled = true
+        } else if (sal.value.length == 0) {
+            alert(`[ERRO] Valor do salto em branco.`)
+            res.innerHTML = `Impossivel contar!`
+            document.getElementById(`fimp`).disabled = true
+        } else if (ini.value == fim.value) {
+            alert(`[ERRO] Valor inicial e final iguais.`)
+            res.innerHTML = `Impossivel contar!`
+            document.getElementById(`fimp`).disabled = true
+        }
+    } else {
+            var dados = document.getElementById(`fres`).innerHTML
+            var imprimir = window.open()
+            imprimir.document.write(innerHTML = `<p>Obrigado!</p>` + dados)
+            imprimir.print()
     }
 }
